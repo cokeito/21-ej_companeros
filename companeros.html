@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Companeros</title>
+
+	<script>
+		
+		
+
+		function Alumnos(name, age, gender) {
+
+			    this.name = name;
+			    this.age = age;
+			    this.gender = gender;
+		}
+
+		var hugo 	= new Alumnos('Hugo',11,1);
+		var paco 	= new Alumnos('Paco',12,1);
+		var luis 	= new Alumnos('Luis',13,1);
+		var donald 	= new Alumnos('Donald',10,1);
+		var daisy 	= new Alumnos('Daisy',14,2);
+		var pepa 	= new Alumnos('Pepa',7,2);
+
+		var grade	= [hugo,paco,luis,donald,daisy,pepa];
+
+		console.log(grade.length);
+
+		/*
+		Ejercicio 1: Devolver un arreglo con solo las mujeres del curso
+		*/
+
+		var womens 		= [];
+		var mens		= [];
+		var ageWomens	= 0;
+		var ageMens		= 0;
+
+		
+		 for (var i =0 ;  i < grade.length ; i++) {
+
+		 	if (grade[i].gender == 2) {
+		 		womens.push(grade[i]);
+		 		ageWomens = ageWomens + grade[i].age;
+		 	}
+
+		 	if (grade[i].gender == 1) {
+		 		mens.push(grade[i]);
+		 		ageMens	= ageMens + grade[i].age;
+		 	}
+
+
+		 }
+
+		 var allAge = ageWomens + ageMens;
+
+		 
+		 
+
+		 console.log('Las Mujeres son:');
+		 console.log(womens);
+
+		 console.log('Los Hombres son:');
+		 console.log(mens);
+		 
+		 console.log('La edad de las mujeres es : '+ageWomens);
+		 console.log('La edad de los hombres es : '+ageMens);
+		 console.log('La suma total de las edades es : '+allAge);
+
+		 // 
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
